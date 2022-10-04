@@ -7,12 +7,12 @@ public class Calculator {
     public static void play(String username) {
 
         Random rand = new Random();
-        var range = 50;
+        var operandRange = 50;
         int answers = 0;
 
         while (true) {
-            var operand1 = rand.nextInt(range);
-            var operand2 = rand.nextInt(range);
+            var operand1 = rand.nextInt(operandRange);
+            var operand2 = rand.nextInt(operandRange);
             var operator = rand.nextInt(3);
 
             int correctAnswer = 0;
