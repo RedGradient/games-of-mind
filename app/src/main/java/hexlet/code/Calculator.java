@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Calculator {
     public static void play(String username) {
 
+        System.out.println("What is the result of the expression?");
+
         Random rand = new Random();
         var operandRange = 50;
         int answers = 0;
