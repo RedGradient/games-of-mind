@@ -14,6 +14,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
 
         // game menu
+        System.out.println("3 - Calculator");
         System.out.println("2 - Even");
         System.out.println("1 - Greet");
         System.out.println("0 - Exit");
@@ -28,14 +29,16 @@ public class App {
             System.out.println("Welcome to the Brain Games!");
 
             switch (choice) {
-                case 1:
-                    Cli.greeting();
-                case 2:
+                case 1 -> Cli.greeting();
+                case 2 -> {
                     var name = askForName();
                     Even.play(name);
-                    break;
+                }
+                case 3 -> {
+                    var name = askForName();
+                    Calculator.play(name);
+                }
             }
-
         }
     }
 }
