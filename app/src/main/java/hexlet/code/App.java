@@ -14,6 +14,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
 
         // game menu
+        System.out.println("4 - GCD");
         System.out.println("3 - Calculator");
         System.out.println("2 - Even");
         System.out.println("1 - Greet");
@@ -37,6 +38,10 @@ public class App {
                 case 3 -> {
                     var name = askForName();
                     Calculator.play(name);
+                }
+                case 4 -> {
+                    var name = askForName();
+                    GCD.play(name);
                 }
             }
         }
