@@ -4,21 +4,25 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
+
+    private static final int MAX_ANSWERS_COUNT = 3;
+
+    private static final int OPERAND_RANGE = 50;
+    private static final int OPERATOR_RANGE = 3;
+
     public static void play(String username) {
 
         System.out.println("What is the result of the expression?");
 
         Random rand = new Random();
-        var operandRange = 50;
         int answers = 0;
 
         while (true) {
-            var operand1 = rand.nextInt(operandRange);
-            var operand2 = rand.nextInt(operandRange);
-            var operator = rand.nextInt(3);
+            var operand1 = rand.nextInt(OPERAND_RANGE);
+            var operand2 = rand.nextInt(OPERAND_RANGE);
+            var operator = rand.nextInt(OPERATOR_RANGE);
 
             int correctAnswer = 0;
-            int maxAnswersCount = 3;
 
             switch (operator) {
                 case 0 -> {
@@ -33,7 +37,6 @@ public class Calculator {
                     correctAnswer = operand1 * operand2;
                     System.out.println("Question: " + operand1 + " * " + operand2);
                 }
-                default -> {}
             }
 
             Scanner sc = new Scanner(System.in);
@@ -51,7 +54,7 @@ public class Calculator {
 
             System.out.println("Correct!");
 
-            if (answers == maxAnswersCount) {
+            if (answers == MAX_ANSWERS_COUNT) {
                 System.out.println("Congratulations, " + username + "!");
                 return;
             }

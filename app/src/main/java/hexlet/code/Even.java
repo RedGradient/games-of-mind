@@ -4,15 +4,18 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Even {
+
+    private static final int MAX_ANSWERS_COUNT = 3;
+
+    private static final int RANDOM_NUMBER_RANGE = 100;
     public static void play(String username) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         Random rand = new Random();
         var answers = 0;
-        var maxAnswersCount = 3;
 
         while (true) {
-            var randomNumber = rand.nextInt(100);
+            var randomNumber = rand.nextInt(RANDOM_NUMBER_RANGE);
             var correctAnswer = (randomNumber % 2 == 0) ? "yes" : "no";
 
             System.out.println("Question: " + randomNumber);
@@ -31,7 +34,7 @@ public class Even {
             answers++;
 
             System.out.println("Correct!");
-            if (answers == maxAnswersCount) {
+            if (answers == MAX_ANSWERS_COUNT) {
                 System.out.println("Congratulations, " + username + "!");
                 return;
             }
