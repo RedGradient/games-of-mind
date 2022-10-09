@@ -24,25 +24,27 @@ public class Calculator {
 
             int correctAnswer = 0;
 
+            String question = null;
             switch (operator) {
                 case 0 -> {
                     correctAnswer = operand1 + operand2;
-                    System.out.println("Question: " + operand1 + " + " + operand2);
+                    question = operand1 + " + " + operand2;
                 }
                 case 1 -> {
                     correctAnswer = operand1 - operand2;
-                    System.out.println("Question: " + operand1 + " - " + operand2);
+                    question = operand1 + " - " + operand2;
                 }
                 case 2 -> {
                     correctAnswer = operand1 * operand2;
-                    System.out.println("Question: " + operand1 + " * " + operand2);
+                    question = operand1 + " * " + operand2;
                 }
             }
+            System.out.println("Question: " + question);
 
+
+            System.out.print("Your answer: ");
             Scanner sc = new Scanner(System.in);
             var input = sc.nextInt();
-
-            System.out.println("Your answer: " + input);
 
             if (input != correctAnswer) {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", input, correctAnswer);
