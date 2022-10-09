@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.Games.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -32,20 +34,16 @@ public class App {
             switch (choice) {
                 case 1 -> Cli.greeting();
                 case 2 -> {
-                    var name = askForName();
-                    Even.play(name);
+                    Even.play();
                 }
                 case 3 -> {
-                    var name = askForName();
-                    Calculator.play(name);
+                    Calculator.play();
                 }
                 case 4 -> {
-                    var name = askForName();
-                    GCD.play(name);
+                    GCD.play();
                 }
                 case 5 -> {
-                    var name = askForName();
-                    Progression.play(name);
+                    Progression.play();
                 }
             }
         }
