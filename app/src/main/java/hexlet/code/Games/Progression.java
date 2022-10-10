@@ -19,8 +19,9 @@ public class Progression {
         HashMap<String, String> questionAnswerPair = new HashMap<>();
 
         var arrayLength = Engine.RAND.nextInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
-        int[] progression = new int[arrayLength];
         var step = Engine.RAND.nextInt(STEP_MIN, STEP_MAX);
+
+        int[] progression = new int[arrayLength];
 
         var indexOfHiddenElement = Engine.RAND.nextInt(arrayLength);
 
@@ -33,8 +34,9 @@ public class Progression {
 
             progressionBuilder.append(" ");
             progressionBuilder.append(value);
-            if (i != arrayLength - 1) progressionBuilder.append(" ");
         }
+
+        progressionBuilder.append(" ");
 
         var correctAnswer = progression[indexOfHiddenElement];
 
