@@ -34,7 +34,7 @@ public class Prime {
     }
 
     public static void play() {
-        var invitationQuestion = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+        var invitationQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         HashMap<String, String> questionAnswerPairs = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
