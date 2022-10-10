@@ -3,5 +3,5 @@
 
 ### Screenshots
 
-# Greet
+## Greet
 ![greet](app/src/resources/greet.png)
