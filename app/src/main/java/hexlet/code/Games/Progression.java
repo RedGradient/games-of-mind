@@ -26,7 +26,7 @@ public class Progression {
         var indexOfHiddenElement = Engine.RAND.nextInt(arrayLength);
 
         var firstElement = Engine.RAND.nextInt(FIRST_ELEMENT_RANGE);
-        StringBuilder progressionBuilder = new StringBuilder(firstElement);
+        StringBuilder progressionBuilder = new StringBuilder(Integer.toString(firstElement));
         progression[0] = firstElement;
         for (int i = 1; i < arrayLength; i++) {
             var value = progression[i - 1] + step;
@@ -35,8 +35,6 @@ public class Progression {
             progressionBuilder.append(" ");
             progressionBuilder.append(value);
         }
-
-        progressionBuilder.append(" ");
 
         var correctAnswer = progression[indexOfHiddenElement];
 
