@@ -19,11 +19,20 @@ public class Calculator {
         var operator = OPERATORS[Engine.RAND.nextInt(OPERATORS.length)];
 
         String question = operand1 + " " + operator + " " + operand2;
-        int correctAnswer = 0;
+        int correctAnswer;
         switch (operator) {
-            case "+" -> correctAnswer = operand1 + operand2;
-            case "-" -> correctAnswer = operand1 - operand2;
-            case "*" -> correctAnswer = operand1 * operand2;
+            case "+" -> {
+                correctAnswer = operand1 + operand2;
+            }
+            case "-" -> {
+                correctAnswer = operand1 - operand2;
+            }
+            case "*" -> {
+                correctAnswer = operand1 * operand2;
+            }
+            default -> {
+                correctAnswer = 0;
+            }
         }
 
         questionAnswerPair.put(question, Integer.toString(correctAnswer));

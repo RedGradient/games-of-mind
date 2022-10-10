@@ -1,6 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.Games.*;
+import hexlet.code.Games.Calculator;
+import hexlet.code.Games.Cli;
+import hexlet.code.Games.Even;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.Prime;
+import hexlet.code.Games.Progression;
 
 import java.util.Scanner;
 
@@ -32,6 +37,9 @@ public class App {
                 case "4" -> GCD.play();
                 case "5" -> Progression.play();
                 case "6" -> Prime.play();
+                default -> {
+
+                }
             }
         }
     }
