@@ -6,7 +6,8 @@ import java.util.HashMap;
 
 public class GCD {
 
-    private static final int NUMBER_RANGE = 50;
+    private static final int NUMBER_RANGE_MIN = 1;
+    private static final int NUMBER_RANGE_MAX = 50;
     private static int getGCD(int a, int b) {
         if (b == 0) {
             return 1;
@@ -20,8 +21,8 @@ public class GCD {
     public static HashMap<String, String> createQuestionAnswerPair() {
         HashMap<String, String> questionAnswerPair = new HashMap<>();
 
-        var number1 = Engine.RAND.nextInt(NUMBER_RANGE);
-        var number2 = Engine.RAND.nextInt(NUMBER_RANGE);
+        var number1 = Engine.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
+        var number2 = Engine.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
 
         var question = number1 + " " + number2;
         var correctAnswer = getGCD(Math.max(number1, number2), Math.min(number1, number2));
