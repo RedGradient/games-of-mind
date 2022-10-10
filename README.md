@@ -10,7 +10,8 @@
 ## Even
 ![even game_win](app/src/resources/even_win.png)
 ![even game_lose](app/src/resources/even_lose.png)
-[asciinema.org](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh)
+
+[![demo](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh.svg)](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh)
 
 ## Calculator
 ![calculator game_win](app/src/resources/calculator_win.png)
