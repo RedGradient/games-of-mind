@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/RedGradient/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/RedGradient/java-project-61/actions)
-[![Code Climate](https://codeclimate.com/github/cloudfoundry/membrane.png)](https://github.com/RedGradient/java-project-61)
+
 
 ### Screenshots
 
@@ -10,6 +10,7 @@
 ## Even
 ![even game_win](app/src/resources/even_win.png)
 ![even game_lose](app/src/resources/even_lose.png)
+[asciinema.org](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh)
 
 ## Calculator
 ![calculator game_win](app/src/resources/calculator_win.png)
