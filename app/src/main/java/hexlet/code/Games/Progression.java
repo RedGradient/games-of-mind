@@ -2,7 +2,6 @@ package hexlet.code.Games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class Progression {
@@ -25,17 +24,22 @@ public class Progression {
 
         var indexOfHiddenElement = Engine.RAND.nextInt(arrayLength);
 
-        progression[0] = Engine.RAND.nextInt(FIRST_ELEMENT_RANGE);
+        var firstElement = Engine.RAND.nextInt(FIRST_ELEMENT_RANGE);
+        StringBuilder progressionBuilder = new StringBuilder(firstElement);
+        progression[0] = firstElement;
         for (int i = 1; i < arrayLength; i++) {
-            progression[i] = progression[i - 1] + step;
+            var value = progression[i - 1] + step;
+            progression[i] = value;
+
+            progressionBuilder.append(" ");
+            progressionBuilder.append(value);
+            if (i != arrayLength - 1) progressionBuilder.append(" ");
         }
 
         var correctAnswer = progression[indexOfHiddenElement];
 
-        var progressionAsString = Arrays.toString(progression)
-                .replace("[", "")
-                .replace("]", "");
-        var question = progressionAsString.replaceFirst(
+        var progressionString = progressionBuilder.toString();
+        var question = progressionString.replaceFirst(
                 Integer.toString(progression[indexOfHiddenElement]),
                 ".."
         );
