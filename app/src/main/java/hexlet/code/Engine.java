@@ -22,40 +22,6 @@ public class Engine {
         username = name;
     }
 
-//    public static String askForStringInput() {
-//        System.out.println("Your answer: ");
-//        Scanner sc = new Scanner(System.in);
-//        return sc.next();
-//    }
-//
-//    public static int askForIntInput() {
-//        System.out.println("Your answer: ");
-//        Scanner sc = new Scanner(System.in);
-//        return sc.nextInt();
-//    }
-//
-//    public static void askQuestion(String question) {
-//        System.out.println("Question: " + question);
-//    }
-//
-//    public static boolean checkIfAnswerIsCorrect(String userAnswer, String correctAnswer) {
-//        if (!userAnswer.equals(correctAnswer)) {
-//            System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", userAnswer, correctAnswer);
-//            System.out.println("Let's try again, " + username + "!");
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    public static boolean checkIfAnswerIsCorrect(int userAnswer, int correctAnswer) {
-//        if (userAnswer != correctAnswer) {
-//            System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", userAnswer, correctAnswer);
-//            System.out.println("Let's try again, " + username + "!");
-//            return false;
-//        }
-//        return true;
-//    }
-
     public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
 
         askForName();
