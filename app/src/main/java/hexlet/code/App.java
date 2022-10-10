@@ -18,20 +18,20 @@ public class App {
 
         System.out.print("Your choice: ");
         Scanner sc = new Scanner(System.in);
-        var choice = sc.nextInt();
+        var choice = sc.next();
 
         System.out.println();
 
-        if (choice != 0) {
+        if (!choice.equals("0")) {
             System.out.println("Welcome to the Brain Games!");
 
             switch (choice) {
-                case 1 -> Cli.greeting();
-                case 2 -> Even.play();
-                case 3 -> Calculator.play();
-                case 4 -> GCD.play();
-                case 5 -> Progression.play();
-                case 6 -> Prime.play();
+                case "1" -> Cli.greeting();
+                case "2" -> Even.play();
+                case "3" -> Calculator.play();
+                case "4" -> GCD.play();
+                case "5" -> Progression.play();
+                case "6" -> Prime.play();
             }
         }
     }
