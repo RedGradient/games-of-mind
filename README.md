@@ -4,27 +4,32 @@
 
 ### Screenshots
 
+
 ## Greet
-![greet](app/src/resources/greet.png)
+[![demo](https://asciinema.org/a/sy6jMS7qOBagozMkoKvmCl2nA.svg)](https://asciinema.org/a/sy6jMS7qOBagozMkoKvmCl2nA)
+
 
 ## Even
-![even game_win](app/src/resources/even_win.png)
-![even game_lose](app/src/resources/even_lose.png)
-
 [![demo](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh.svg)](https://asciinema.org/a/HGzm33uRCRBUeb4ATs13zYIkh)
+[![demo](https://asciinema.org/a/O9kdlVfHLCQgRx4yaGKSznVXC.svg)](https://asciinema.org/a/O9kdlVfHLCQgRx4yaGKSznVXC)
+
 
 ## Calculator
-![calculator game_win](app/src/resources/calculator_win.png)
-![calculator game_lose](app/src/resources/calculator_lose.png)
+[![demo](https://asciinema.org/a/qQMBeMmpaMkIngimPtEIR3LNJ.svg)](https://asciinema.org/a/qQMBeMmpaMkIngimPtEIR3LNJ)
+[![demo](https://asciinema.org/a/qqn1TjNdIqOc6zxpaBT6WnjAD.svg)](https://asciinema.org/a/qqn1TjNdIqOc6zxpaBT6WnjAD)
+
 
 ## GCD
-![gcd game_win](app/src/resources/gcd_win.png)
-![gcd game_lose](app/src/resources/gcd_lose.png)
+[![demo](https://asciinema.org/a/TwdzSpRHYU7jp2v6kYYV4j0aH.svg)](https://asciinema.org/a/TwdzSpRHYU7jp2v6kYYV4j0aH)
+[![demo](https://asciinema.org/a/2bWTw9sgunSVTk9MTvkPM36KT.svg)](https://asciinema.org/a/2bWTw9sgunSVTk9MTvkPM36KT)
+
 
 ## Progression
-![progression game_win](app/src/resources/progression_win.png)
-![progression game_lose](app/src/resources/progression_lose.png)
+[![demo](https://asciinema.org/a/Q7zJ2qTEoSsEWkQL0LOt6bjwX.svg)](https://asciinema.org/a/Q7zJ2qTEoSsEWkQL0LOt6bjwX)
+[![demo](https://asciinema.org/a/R3Lo3FLd3edyjbPM67frYGkUK.svg)](https://asciinema.org/a/R3Lo3FLd3edyjbPM67frYGkUK)
+
 
 ## Prime
-![prime game_win](app/src/resources/prime_win.png)
-![prime game_lose](app/src/resources/prime_lose.png)
+[![demo](https://asciinema.org/a/nc3gNXSt6hNsmy6Hwm3l0ob3Y.svg)](https://asciinema.org/a/nc3gNXSt6hNsmy6Hwm3l0ob3Y)
+[![demo](https://asciinema.org/a/xCsSR5HLoY5ErcelHQ49BJ4Xd.svg)](https://asciinema.org/a/xCsSR5HLoY5ErcelHQ49BJ4Xd)
+
