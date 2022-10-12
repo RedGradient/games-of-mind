@@ -22,8 +22,8 @@ public class GCD {
 
     public static void generateRoundData(HashMap<String, String> roundsData) {
 
-        var number1 = Utils.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
-        var number2 = Utils.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
+        var number1 = Utils.generateRandInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
+        var number2 = Utils.generateRandInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
 
         var question = number1 + " " + number2;
         var correctAnswer = calculateGCD(Math.max(number1, number2), Math.min(number1, number2));

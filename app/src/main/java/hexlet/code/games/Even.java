@@ -14,7 +14,7 @@ public class Even {
     }
 
     private static void generateRoundData(HashMap<String, String> roundsData) {
-        var randomNumber = Utils.RAND.nextInt(RANDOM_NUMBER_RANGE);
+        var randomNumber = Utils.generateRandInt(RANDOM_NUMBER_RANGE);
         var correctAnswer = isEven(randomNumber) ? "yes" : "no";
 
         roundsData.put(Integer.toString(randomNumber), correctAnswer);

@@ -18,14 +18,14 @@ public class Progression {
 
     private static void generateRoundData(HashMap<String, String> roundsData) {
 
-        var arrayLength = Utils.RAND.nextInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
-        var step = Utils.RAND.nextInt(STEP_MIN, STEP_MAX);
+        var arrayLength = Utils.generateRandInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
+        var step = Utils.generateRandInt(STEP_MIN, STEP_MAX);
 
         int[] progression = new int[arrayLength];
 
-        var indexOfHiddenElement = Utils.RAND.nextInt(arrayLength);
+        var indexOfHiddenElement = Utils.generateRandInt(arrayLength);
 
-        var firstElement = Utils.RAND.nextInt(FIRST_ELEMENT_RANGE);
+        var firstElement = Utils.generateRandInt(FIRST_ELEMENT_RANGE);
         StringBuilder progressionBuilder = new StringBuilder(Integer.toString(firstElement));
         progression[0] = firstElement;
         for (int i = 1; i < arrayLength; i++) {

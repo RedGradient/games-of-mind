@@ -29,10 +29,10 @@ public class Calculator {
 
     private static void generateRoundData(HashMap<String, String> roundsData) {
 
-        var operand1 = Utils.RAND.nextInt(OPERAND_RANGE);
-        var operand2 = Utils.RAND.nextInt(OPERAND_RANGE);
+        var operand1 = Utils.generateRandInt(OPERAND_RANGE);
+        var operand2 = Utils.generateRandInt(OPERAND_RANGE);
 
-        var operator = OPERATORS[Utils.RAND.nextInt(OPERATORS.length)];
+        var operator = OPERATORS[Utils.generateRandInt(OPERATORS.length)];
 
         String question = operand1 + " " + operator + " " + operand2;
         int correctAnswer = calculateCorrectAnswer(operator, operand1, operand2);
