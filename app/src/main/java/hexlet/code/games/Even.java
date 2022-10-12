@@ -9,9 +9,13 @@ public class Even {
 
     private static final int RANDOM_NUMBER_RANGE = 100;
 
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
     private static void generateRoundData(HashMap<String, String> roundsData) {
         var randomNumber = Utils.RAND.nextInt(RANDOM_NUMBER_RANGE);
-        var correctAnswer = (randomNumber % 2 == 0) ? "yes" : "no";
+        var correctAnswer = isEven(randomNumber) ? "yes" : "no";
 
         roundsData.put(Integer.toString(randomNumber), correctAnswer);
     }
