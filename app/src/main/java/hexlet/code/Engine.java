@@ -10,19 +10,13 @@ public class Engine {
     public static final Random RAND = new Random();
     public static final int MAX_ANSWERS_COUNT = 3;
 
-    private static String askForName() {
+    public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
+
         System.out.print("May I have your name? ");
 
         Scanner sc = new Scanner(System.in);
-        var name = sc.next();
-        sc.close();
-
-        return name;
-    }
-
-    public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
-
-        var username = askForName();
+        var username = sc.next();
+//        sc.close();
         System.out.println("Hello, " + username + "!");
 
         System.out.println(invitationQuestion);
@@ -35,7 +29,7 @@ public class Engine {
             System.out.println("Question: " + question);
 
             System.out.print("Your answer: ");
-            Scanner sc = new Scanner(System.in);
+//            Scanner sc = new Scanner(System.in);
             var userInput = sc.next();
 
             if (!userInput.equals(correctAnswer)) {
