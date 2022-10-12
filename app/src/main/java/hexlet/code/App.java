@@ -28,7 +28,7 @@ public class App {
         System.out.println("\nWelcome to the Brain Games!");
 
         switch (choice) {
-            case "1" -> Cli.greeting();
+            case "1" -> Cli.greet();
             case "2" -> Even.play();
             case "3" -> Calculator.play();
             case "4" -> GCD.play();
