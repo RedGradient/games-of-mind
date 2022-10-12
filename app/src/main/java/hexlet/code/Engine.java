@@ -2,35 +2,28 @@ package hexlet.code;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Engine {
 
-    public static final Random RAND = new Random();
     public static final int MAX_ANSWERS_COUNT = 3;
 
     public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
 
         System.out.print("May I have your name? ");
-
-        Scanner sc = new Scanner(System.in);
-        var username = sc.next();
-//        sc.close();
+        var username = Utils.SC.next();
         System.out.println("Hello, " + username + "!");
 
         System.out.println(invitationQuestion);
 
-        for (Map.Entry<String, String> pair : questionAnswerPairs.entrySet()) {
+        for (Map.Entry<String, String> roundData : questionAnswerPairs.entrySet()) {
 
-            var question = pair.getKey();
-            var correctAnswer = pair.getValue();
+            var question = roundData.getKey();
+            var correctAnswer = roundData.getValue();
 
             System.out.println("Question: " + question);
 
             System.out.print("Your answer: ");
-//            Scanner sc = new Scanner(System.in);
-            var userInput = sc.next();
+            var userInput = Utils.SC.next();
 
             if (!userInput.equals(correctAnswer)) {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", userInput, correctAnswer);

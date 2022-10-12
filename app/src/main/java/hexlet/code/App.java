@@ -1,13 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.Games.Calculator;
-import hexlet.code.Games.Cli;
-import hexlet.code.Games.Even;
-import hexlet.code.Games.GCD;
-import hexlet.code.Games.Prime;
-import hexlet.code.Games.Progression;
-
-import java.util.Scanner;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 public class App {
     public static void main(String[] args) {
@@ -22,9 +19,7 @@ public class App {
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
-        Scanner sc = new Scanner(System.in);
-        var choice = sc.next();
-        sc.close();
+        var choice = Utils.SC.next();
 
         if (choice.equals("0")) {
             return;
@@ -41,5 +36,7 @@ public class App {
             case "6" -> Prime.play();
             default -> System.out.println("Incorrect input\nPlease, enter number of the game listed above");
         }
+
+        Utils.SC.close();
     }
 }

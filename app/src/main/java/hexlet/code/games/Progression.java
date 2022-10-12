@@ -1,6 +1,7 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.HashMap;
 
@@ -15,17 +16,17 @@ public class Progression {
 
     private static final int FIRST_ELEMENT_RANGE = 50;
 
-    private static HashMap<String, String> createQuestionAnswerPair() {
-        HashMap<String, String> questionAnswerPair = new HashMap<>();
+    private static HashMap<String, String> createRoundsData() {
+        HashMap<String, String> roundsData = new HashMap<>();
 
-        var arrayLength = Engine.RAND.nextInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
-        var step = Engine.RAND.nextInt(STEP_MIN, STEP_MAX);
+        var arrayLength = Utils.RAND.nextInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
+        var step = Utils.RAND.nextInt(STEP_MIN, STEP_MAX);
 
         int[] progression = new int[arrayLength];
 
-        var indexOfHiddenElement = Engine.RAND.nextInt(arrayLength);
+        var indexOfHiddenElement = Utils.RAND.nextInt(arrayLength);
 
-        var firstElement = Engine.RAND.nextInt(FIRST_ELEMENT_RANGE);
+        var firstElement = Utils.RAND.nextInt(FIRST_ELEMENT_RANGE);
         StringBuilder progressionBuilder = new StringBuilder(Integer.toString(firstElement));
         progression[0] = firstElement;
         for (int i = 1; i < arrayLength; i++) {
@@ -44,22 +45,22 @@ public class Progression {
                 ".."
         );
 
-        questionAnswerPair.put(question, Integer.toString(correctAnswer));
+        roundsData.put(question, Integer.toString(correctAnswer));
 
-        return questionAnswerPair;
+        return roundsData;
     }
 
     public static void play() {
 
-        var invitationQuestion = "What number is missing in the progression?";
+        var description = "What number is missing in the progression?";
 
-        HashMap<String, String> questionAnswerPairs = new HashMap<>();
+        HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
-            HashMap<String, String> pair = createQuestionAnswerPair();
-            questionAnswerPairs.putAll(pair);
+            HashMap<String, String> pair = createRoundsData();
+            roundsData.putAll(pair);
         }
 
-        Engine.run(invitationQuestion, questionAnswerPairs);
+        Engine.run(description, roundsData);
 
     }
 
