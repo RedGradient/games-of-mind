@@ -39,9 +39,7 @@ public class App {
             case "4" -> GCD.play();
             case "5" -> Progression.play();
             case "6" -> Prime.play();
-            default -> {
-
-            }
+            default -> System.out.println("Incorrect input\nPlease, enter number of the game listed above");
         }
     }
 }
