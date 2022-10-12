@@ -23,15 +23,12 @@ public class Prime {
         return true;
     }
 
-    private static HashMap<String, String> createRoundsData() {
-        HashMap<String, String> roundsData = new HashMap<>();
+    private static void generateRoundData(HashMap<String, String> roundsData) {
 
         var randomNumber = Utils.RAND.nextInt(RANDOM_NUMBER_RANGE);
         var correctAnswer = isPrime(randomNumber) ? "yes" : "no";
 
         roundsData.put(Integer.toString(randomNumber), correctAnswer);
-
-        return roundsData;
     }
 
     public static void play() {
@@ -39,8 +36,7 @@ public class Prime {
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
-            HashMap<String, String> pair = createRoundsData();
-            roundsData.putAll(pair);
+            generateRoundData(roundsData);
         }
 
         Engine.run(description, roundsData);

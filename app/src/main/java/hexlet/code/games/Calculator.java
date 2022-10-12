@@ -10,8 +10,24 @@ public class Calculator {
     private static final int OPERAND_RANGE = 50;
     private static final char[] OPERATORS = {'+', '-', '*'};
 
-    private static HashMap<String, String> createRoundsData() {
-        HashMap<String, String> roundData = new HashMap<>();
+    private static int calculateCorrectAnswer(char operator, int operand1, int operand2) {
+        switch (operator) {
+            case '+' -> {
+                return operand1 + operand2;
+            }
+            case '-' -> {
+                return operand1 - operand2;
+            }
+            case '*' -> {
+                return operand1 * operand2;
+            }
+            default -> {
+                throw new Error("Unknown operator: '" + operator + "'");
+            }
+        }
+    }
+
+    private static void generateRoundData(HashMap<String, String> roundsData) {
 
         var operand1 = Utils.RAND.nextInt(OPERAND_RANGE);
         var operand2 = Utils.RAND.nextInt(OPERAND_RANGE);
@@ -19,24 +35,9 @@ public class Calculator {
         var operator = OPERATORS[Utils.RAND.nextInt(OPERATORS.length)];
 
         String question = operand1 + " " + operator + " " + operand2;
-        int correctAnswer;
-        switch (operator) {
-            case '+' -> {
-                correctAnswer = operand1 + operand2;
-            }
-            case '-' -> {
-                correctAnswer = operand1 - operand2;
-            }
-            case '*' -> {
-                correctAnswer = operand1 * operand2;
-            }
-            default -> {
-                throw new Error("Unknown operator: '" + operator + "'");
-            }
-        }
+        int correctAnswer = calculateCorrectAnswer(operator, operand1, operand2);
 
-        roundData.put(question, Integer.toString(correctAnswer));
-        return roundData;
+        roundsData.put(question, Integer.toString(correctAnswer));
     }
 
     public static void play() {
@@ -44,8 +45,7 @@ public class Calculator {
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
-            HashMap<String, String> roundData = createRoundsData();
-            roundsData.putAll(roundData);
+            generateRoundData(roundsData);
         }
 
         Engine.run(description, roundsData);

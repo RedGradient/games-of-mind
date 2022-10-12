@@ -16,8 +16,7 @@ public class Progression {
 
     private static final int FIRST_ELEMENT_RANGE = 50;
 
-    private static HashMap<String, String> createRoundsData() {
-        HashMap<String, String> roundsData = new HashMap<>();
+    private static void generateRoundData(HashMap<String, String> roundsData) {
 
         var arrayLength = Utils.RAND.nextInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
         var step = Utils.RAND.nextInt(STEP_MIN, STEP_MAX);
@@ -46,8 +45,6 @@ public class Progression {
         );
 
         roundsData.put(question, Integer.toString(correctAnswer));
-
-        return roundsData;
     }
 
     public static void play() {
@@ -56,8 +53,7 @@ public class Progression {
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
-            HashMap<String, String> pair = createRoundsData();
-            roundsData.putAll(pair);
+            generateRoundData(roundsData);
         }
 
         Engine.run(description, roundsData);

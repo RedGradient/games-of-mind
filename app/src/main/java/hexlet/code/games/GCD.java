@@ -20,8 +20,7 @@ public class GCD {
         return calculateGCD(b, a % b);
     }
 
-    public static HashMap<String, String> createRoundsData() {
-        HashMap<String, String> roundsData = new HashMap<>();
+    public static void generateRoundData(HashMap<String, String> roundsData) {
 
         var number1 = Utils.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
         var number2 = Utils.RAND.nextInt(NUMBER_RANGE_MIN, NUMBER_RANGE_MAX);
@@ -30,16 +29,13 @@ public class GCD {
         var correctAnswer = calculateGCD(Math.max(number1, number2), Math.min(number1, number2));
 
         roundsData.put(question, Integer.toString(correctAnswer));
-
-        return roundsData;
     }
     public static void play() {
         var description = "Find the greatest common divisor of given numbers.";
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
-            HashMap<String, String> pair = createRoundsData();
-            roundsData.putAll(pair);
+            generateRoundData(roundsData);
         }
 
         Engine.run(description, roundsData);
