@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/RedGradient/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/RedGradient/java-project-61/actions)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/66d487cd35c7f6c49c64/maintainability)](https://codeclimate.com/github/RedGradient/java-project-61/maintainability)
 
 ### Screenshots
 
