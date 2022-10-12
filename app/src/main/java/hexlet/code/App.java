@@ -26,19 +26,21 @@ public class App {
         var choice = sc.next();
         sc.close();
 
-        if (!choice.equals("0")) {
-            System.out.println("\nWelcome to the Brain Games!");
+        if (choice.equals("0")) {
+            return;
+        }
 
-            switch (choice) {
-                case "1" -> Cli.greeting();
-                case "2" -> Even.play();
-                case "3" -> Calculator.play();
-                case "4" -> GCD.play();
-                case "5" -> Progression.play();
-                case "6" -> Prime.play();
-                default -> {
+        System.out.println("\nWelcome to the Brain Games!");
 
-                }
+        switch (choice) {
+            case "1" -> Cli.greeting();
+            case "2" -> Even.play();
+            case "3" -> Calculator.play();
+            case "4" -> GCD.play();
+            case "5" -> Progression.play();
+            case "6" -> Prime.play();
+            default -> {
+
             }
         }
     }
