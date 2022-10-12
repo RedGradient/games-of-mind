@@ -23,6 +23,7 @@ public class Engine {
     public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
 
         var username = askForName();
+        System.out.println("Hello, " + username + "!");
 
         System.out.println(invitationQuestion);
 
