@@ -10,21 +10,17 @@ public class Engine {
     public static final Random RAND = new Random();
     public static final int MAX_ANSWERS_COUNT = 3;
 
-    private static String username;
-
-    private static void askForName() {
+    private static String askForName() {
         System.out.print("May I have your name? ");
 
         Scanner sc = new Scanner(System.in);
-        var name = sc.next();
 
-        System.out.println("Hello, " + name + "!");
-        username = name;
+        return sc.next();
     }
 
     public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
 
-        askForName();
+        var username = askForName();
 
         System.out.println(invitationQuestion);
 
