@@ -24,6 +24,7 @@ public class App {
         System.out.print("Your choice: ");
         Scanner sc = new Scanner(System.in);
         var choice = sc.next();
+        sc.close();
 
         if (!choice.equals("0")) {
             System.out.println("\nWelcome to the Brain Games!");
