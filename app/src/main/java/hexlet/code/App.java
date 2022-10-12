@@ -25,10 +25,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         var choice = sc.next();
 
-        System.out.println();
-
         if (!choice.equals("0")) {
-            System.out.println("Welcome to the Brain Games!");
+            System.out.println("\nWelcome to the Brain Games!");
 
             switch (choice) {
                 case "1" -> Cli.greeting();
