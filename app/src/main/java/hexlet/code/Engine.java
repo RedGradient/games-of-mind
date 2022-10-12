@@ -14,8 +14,10 @@ public class Engine {
         System.out.print("May I have your name? ");
 
         Scanner sc = new Scanner(System.in);
+        var name = sc.next();
+        sc.close();
 
-        return sc.next();
+        return name;
     }
 
     public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
