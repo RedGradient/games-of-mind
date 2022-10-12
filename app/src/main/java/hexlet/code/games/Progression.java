@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class Progression {
 
+    private static final String DESCRIPTION = "What number is missing in the progression?";
 
     // min & max values for randomizers
     private static final int ARRAY_LENGTH_MIN = 5;
@@ -49,14 +50,12 @@ public class Progression {
 
     public static void play() {
 
-        var description = "What number is missing in the progression?";
-
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
             generateRoundData(roundsData);
         }
 
-        Engine.run(description, roundsData);
+        Engine.run(DESCRIPTION, roundsData);
 
     }
 

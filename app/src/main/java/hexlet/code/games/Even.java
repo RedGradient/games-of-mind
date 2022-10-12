@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class Even {
 
+    private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final int RANDOM_NUMBER_RANGE = 100;
 
     private static boolean isEven(int number) {
@@ -21,13 +22,12 @@ public class Even {
     }
 
     public static void play() {
-        var description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
             generateRoundData(roundsData);
         }
 
-        Engine.run(description, roundsData);
+        Engine.run(DESCRIPTION, roundsData);
     }
 }

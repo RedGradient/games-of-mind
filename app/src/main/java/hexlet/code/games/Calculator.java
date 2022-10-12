@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class Calculator {
 
+    private static final String DESCRIPTION = "What is the result of the expression?";
     private static final int OPERAND_RANGE = 50;
     private static final char[] OPERATORS = {'+', '-', '*'};
 
@@ -41,13 +42,12 @@ public class Calculator {
     }
 
     public static void play() {
-        var description = "What is the result of the expression?";
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
             generateRoundData(roundsData);
         }
 
-        Engine.run(description, roundsData);
+        Engine.run(DESCRIPTION, roundsData);
     }
 }

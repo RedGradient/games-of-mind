@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class GCD {
 
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
     private static final int NUMBER_RANGE_MIN = 1;
     private static final int NUMBER_RANGE_MAX = 50;
 
@@ -31,13 +32,12 @@ public class GCD {
         roundsData.put(question, Integer.toString(correctAnswer));
     }
     public static void play() {
-        var description = "Find the greatest common divisor of given numbers.";
 
         HashMap<String, String> roundsData = new HashMap<>();
         for (var i = 0; i < Engine.MAX_ANSWERS_COUNT; i++) {
             generateRoundData(roundsData);
         }
 
-        Engine.run(description, roundsData);
+        Engine.run(DESCRIPTION, roundsData);
     }
 }
