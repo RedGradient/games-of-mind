@@ -11,7 +11,7 @@ public class Calculator {
     private static final int OPERAND_RANGE = 50;
     private static final char[] OPERATORS = {'+', '-', '*'};
 
-    private static int calculateCorrectAnswer(char operator, int operand1, int operand2) {
+    private static int calculate(char operator, int operand1, int operand2) {
         switch (operator) {
             case '+' -> {
                 return operand1 + operand2;
@@ -36,7 +36,7 @@ public class Calculator {
         var operator = OPERATORS[Utils.generateRandInt(OPERATORS.length)];
 
         String question = operand1 + " " + operator + " " + operand2;
-        int correctAnswer = calculateCorrectAnswer(operator, operand1, operand2);
+        int correctAnswer = calculate(operator, operand1, operand2);
 
         roundsData.put(question, Integer.toString(correctAnswer));
     }
