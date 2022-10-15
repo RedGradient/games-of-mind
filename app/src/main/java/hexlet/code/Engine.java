@@ -7,13 +7,13 @@ public class Engine {
 
     public static final int MAX_ANSWERS_COUNT = 3;
 
-    public static void run(String invitationQuestion, HashMap<String, String> questionAnswerPairs) {
+    public static void run(String description, HashMap<String, String> questionAnswerPairs) {
 
         System.out.print("May I have your name? ");
         var username = Utils.SC.next();
         System.out.println("Hello, " + username + "!");
 
-        System.out.println(invitationQuestion);
+        System.out.println(description);
 
         for (Map.Entry<String, String> roundData : questionAnswerPairs.entrySet()) {
 
