@@ -2,6 +2,7 @@ package hexlet.code;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Engine {
 
@@ -10,7 +11,10 @@ public class Engine {
     public static void run(String description, HashMap<String, String> roundsData) {
 
         System.out.print("May I have your name? ");
-        var username = Utils.SC.next();
+
+        Scanner sc = new Scanner(System.in);
+        var username = sc.next();
+
         System.out.println("Hello, " + username + "!");
 
         System.out.println(description);
@@ -23,7 +27,7 @@ public class Engine {
             System.out.println("Question: " + question);
 
             System.out.print("Your answer: ");
-            var userInput = Utils.SC.next();
+            var userInput = sc.next();
 
             if (!userInput.equals(correctAnswer)) {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", userInput, correctAnswer);
@@ -35,7 +39,6 @@ public class Engine {
         }
 
         System.out.println("Congratulations, " + username + "!");
-
     }
 
 }
