@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class Progression {
@@ -25,7 +24,7 @@ public class Progression {
             var value = progression[i - 1] + step;
             progression[i] = value;
         }
-        System.out.println(Arrays.toString(progression));
+
         return progression;
     }
 
