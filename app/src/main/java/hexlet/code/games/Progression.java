@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Progression {
@@ -17,35 +18,43 @@ public class Progression {
 
     private static final int FIRST_ELEMENT_RANGE = 50;
 
+    private static int[] generateProgression(int firstElement, int step, int length) {
+        var progression = new int[length];
+        progression[0] = firstElement;
+        for (int i = 1; i < length; i++) {
+            var value = progression[i - 1] + step;
+            progression[i] = value;
+        }
+        System.out.println(Arrays.toString(progression));
+        return progression;
+    }
+
     private static void generateRoundData(HashMap<String, String> roundsData) {
 
         var arrayLength = Utils.generateRandInt(ARRAY_LENGTH_MIN, ARRAY_LENGTH_MAX);
         var step = Utils.generateRandInt(STEP_MIN, STEP_MAX);
-
-        int[] progression = new int[arrayLength];
-
-        var indexOfHiddenElement = Utils.generateRandInt(arrayLength);
-
         var firstElement = Utils.generateRandInt(FIRST_ELEMENT_RANGE);
-        StringBuilder progressionBuilder = new StringBuilder(Integer.toString(firstElement));
-        progression[0] = firstElement;
-        for (int i = 1; i < arrayLength; i++) {
-            var value = progression[i - 1] + step;
-            progression[i] = value;
 
+        int[] progression = generateProgression(firstElement, step, arrayLength);
+
+        StringBuilder progressionBuilder = new StringBuilder(Integer.toString(firstElement));
+
+        for (var i = 1; i < arrayLength; i++) {
+            var value = progression[i];
             progressionBuilder.append(" ");
             progressionBuilder.append(value);
         }
 
-        var correctAnswer = progression[indexOfHiddenElement];
+        var indexOfHiddenNumber = Utils.generateRandInt(arrayLength);
+        var hiddenNumber = progression[indexOfHiddenNumber];
 
         var progressionString = progressionBuilder.toString();
         var question = progressionString.replaceFirst(
-                Integer.toString(progression[indexOfHiddenElement]),
+                Integer.toString(hiddenNumber),
                 ".."
         );
 
-        roundsData.put(question, Integer.toString(correctAnswer));
+        roundsData.put(question, Integer.toString(hiddenNumber));
     }
 
     public static void play() {
