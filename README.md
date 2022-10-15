@@ -30,7 +30,7 @@ In this game you should answer whether the given number is prime.
 A number is prime if it is divisible only by itself and 1 (e.g. 2, 3, 5, 7, 11).  
 Answer '*yes*' or '*no*'.
 
-## Screenshots
+## Examples
 
 ### Greet
 [![demo](https://asciinema.org/a/sy6jMS7qOBagozMkoKvmCl2nA.svg)](https://asciinema.org/a/sy6jMS7qOBagozMkoKvmCl2nA)
